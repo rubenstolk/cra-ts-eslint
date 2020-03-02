@@ -1,24 +1,18 @@
 import React from 'react';
 import Link from '@material-ui/core/Link';
-import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Title from './Title';
 
-const useStyles = makeStyles({
-  depositContext: {
-    flex: 1,
-  },
-});
+import styles from './Deposits.module.scss';
 
 export default function Deposits() {
-  const classes = useStyles();
   return (
-    <>
+    <div className={styles.root}>
       <Title>Recent Deposits</Title>
       <Typography component="p" variant="h4">
         $3,024.00
       </Typography>
-      <Typography color="textSecondary" className={classes.depositContext}>
+      <Typography color="textSecondary" className="context">
         on 15 March, 2019
       </Typography>
       <div>
@@ -26,6 +20,6 @@ export default function Deposits() {
           View balance
         </Link>
       </div>
-    </>
+    </div>
   );
 }

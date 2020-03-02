@@ -1,0 +1,8 @@
+.root {
+  :global {
+    color: green;
+    .context {
+      color: orange;
+    }
+  }
+}
